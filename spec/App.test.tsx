@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 
 describe('App', () => {
   it('renders', () => {
-    const component = shallow(<App />);
-
-    expect(component.exists()).toEqual(true);
+    render(<App />);
+    expect(screen.getByAltText(/origin logo/i)).toBeTruthy();
   });
 });

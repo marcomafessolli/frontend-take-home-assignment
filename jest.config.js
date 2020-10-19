@@ -8,8 +8,8 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,
   moduleNameMapper: {
-    '\\.(svg|jpg|png|css)$': '<rootDir>/spec/empty-module.js'
+    '\\.(svg|jpg|png|css)$': '<rootDir>/__mocks__/file.js'
   },
-  setupFilesAfterEnv: ['<rootDir>spec/setup.js'],
-  moduleDirectories: ['node_modules', 'src']
+  moduleDirectories: ['node_modules', 'src'],
+  setupFilesAfterEnv: ['<rootDir>/spec/setup-file.ts']
 };
